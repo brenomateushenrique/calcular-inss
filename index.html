@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Calcular</title>
+</head>
+<body>
+
+    <div class="dp-menu">
+        
+        <h1>React Venda de Produtos</h1>
+        <h3>Vendas</h3>
+        <input onInput={calcular()} class="text" type="number" id='vendas' value=""></input>
+        <h3 class="base-inss">Base INSS</h3>
+        <input class="inss" type="text" id='res' placeholder="R$" value="" onInput={calcular()}></input> 
+        <input class="desc" type="number" id='inss' onInput={calcular()}></input>
+        <h3 class="b">Desconto INSS:</h3>
+        <input class="c" type="number" id='irpf' onInput={calcular()}></input>
+        <h3 class="d">Desconto IRPF:</h3>
+        <h3 class="f">Salário Líquido</h3>
+        <input class="e" type="number" id='sal_liquido' onInput={calcular()}></input>
+        
+        <div class="border">  </div>
+        <div class="borderum"> </div>
+        <div class="borderdois"></div>
+        
+    </div>
+
+
+    <script >
+        function calcular(){
+        var valor_vendas = (document.getElementById('vendas').value);
+        var num22 = valor_vendas;
+        document.querySelector('#res').value = ('R$'+num22);
+
+        if(valor_vendas <= 1100)
+        {
+            var inss = (valor_vendas * 0.075).toFixed(2);
+            var irpf = (valor_vendas * 0.00).toFixed(2);
+            var valor_final = ((valor_vendas - inss) - (irpf)).toFixed(2);
+            var num22 = valor_vendas;
+
+            document.querySelector('#inss').value = inss;
+            document.querySelector('#irpf').value = irpf;
+            document.querySelector('#sal_liquido').value = valor_final;
+
+        }
+        else if (valor_vendas > 1100 && valor_vendas <= 2100)
+        {
+            var inss = (valor_vendas * 0.09).toFixed(2);
+            var irpf = (valor_vendas * 0.075).toFixed(2);
+            var valor_final = ((valor_vendas - inss) - irpf).toFixed(2);
+
+            document.querySelector('#inss').value = inss;
+            document.querySelector('#irpf').value = irpf;
+            document.querySelector('#sal_liquido').value = valor_final;
+        }
+        else if (valor_vendas > 2100 && valor_vendas <= 3150)
+        {
+            var inss = (valor_vendas * 0.12).toFixed(2);
+            var irpf = (valor_vendas * 0.15).toFixed(2);
+            var valor_final = ((valor_vendas - inss) - irpf).toFixed(2);
+
+            document.querySelector('#inss').value = inss;
+            document.querySelector('#irpf').value = irpf;
+            document.querySelector('#sal_liquido').value = valor_final;
+        }
+        else if (valor_vendas > 3150 && valor_vendas <= 6150)
+        {
+            var inss = (valor_vendas * 0.14).toFixed(2);
+            var irpf = (valor_vendas * 0.22).toFixed(2);
+            var valor_final = ((valor_vendas - inss) - irpf).toFixed(2);
+            
+            document.querySelector('#inss').value = inss;
+            document.querySelector('#irpf').value = irpf;
+            document.querySelector('#sal_liquido').value = valor_final;
+        }
+        else if (valor_vendas > 6150)
+        {
+            var inss = (valor_vendas * 0.16).toFixed(2);
+            var irpf = (valor_vendas * 0.275).toFixed(2);
+            var valor_final = ((valor_vendas - inss) - irpf).toFixed(2);
+        
+            document.querySelector('#inss').value = inss;
+            document.querySelector('#irpf').value = irpf;
+            document.querySelector('#sal_liquido').value = valor_final;
+        }
+    }
+    </script>
+</body>
+</html>

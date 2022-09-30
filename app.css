@@ -1,0 +1,100 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;   
+    background-color: rgb(255, 255, 255);
+}
+
+.dp-menu h1{
+    color: red;
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 8px;
+}
+
+.dp-menu h3{
+    margin-top: 80px;
+    margin-left: 400px;
+}
+
+.dp-menu .text{
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(53, 187, 158);
+    margin-left: 400px;
+    width: 1100px;
+}
+
+.dp-menu .inss{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(73, 73, 73);
+    margin-left: 400px;
+    width: 200px;
+}
+
+.dp-menu .desc{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(73, 73, 73);
+    margin-left: 30px;
+    width: 200px;
+}
+
+.dp-menu .b{
+    margin-top: -60px;
+    margin-left: 640px;
+}
+
+.dp-menu .c {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(73, 73, 73);
+    margin-left: 1300px;
+    width: 200px;
+    position: fixed;
+}
+
+.dp-menu .d{
+    margin-top: -40px;
+    margin-left: 1300px;
+}
+
+.dp-menu .e{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(73, 73, 73);
+    margin-left: 400px;
+    width: 200px;
+}
+
+.dp-menu .border{
+    background-color: rgb(255, 174, 0);
+    height: 30px;
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 200px;
+    margin-left: -200px;
+}
+
+.dp-menu .borderum{
+    background-color: rgb(175, 30, 20);
+    height: 30px;
+    width: 50px;
+    margin-top: 200px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.dp-menu .borderdois{
+    background-color: rgb(3, 148, 104);
+    height: 30px;
+    width: 900px;
+    margin-top: 200px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.dp-menu .base-inss{
+    margin-top: 90px;
+}
